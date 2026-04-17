@@ -1,0 +1,218 @@
+/* Estilos Generales */
+body { 
+    margin: 0; 
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    line-height: 1.6; 
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+main .container {
+    padding: 60px 20px;
+}
+
+/* --- TIPOGRAFÍA --- */
+.serif-title { font-family: 'Playfair Display', serif; }
+.extra-large { font-size: 3rem; margin: 10px 0; }
+.large-text { font-size: 2.5rem; }
+
+/* --- HEADER PRINCIPAL Y HERO --- */
+.main-header {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(139,0,0,0.75)), 
+                url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Barra de Navegación (Estilos de tu imagen) */
+.navbar {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre enlaces */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.7); /* Color texto no activo */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff4d4d; /* Color rojo vibrante para el enlace activo/hover */
+}
+
+/* Sección Hero (Ajustada) */
+.hero {
+    height: 70vh; /* Un poco menos de altura para compensar la nav */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hero-logo { width: 140px; margin-bottom: 20px; }
+.subtitle { letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 10px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; max-width: 800px; margin-top: 0; }
+
+/* --- CONTENIDO PRINCIPAL (Reutilizado) --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { padding: 40px; border-radius: 12px; }
+.info-card { background: #f9f9f9; border-left: 5px solid #8b0000; }
+.mission-card { background: #8b0000; color: white; }
+.dark-section { background: #121212; color: white; text-align: center; padding: 60px 0; }
+.qr-container { background: #1a1a1a; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; padding: 50px; border-radius: 20px; margin-top: 40px; }
+.qr-text { max-width: 450px; text-align: left; }
+.qr-box { background: white; padding: 20px; border-radius: 15px; width: 160px; margin: 25px 0; }
+.qr-box img { width: 100%; display: block; }
+.side-img { width: 350px; border-radius: 15px; object-fit: cover; }
+.youtube-callout { margin-top: 30px; font-size: 1.1rem; }
+
+/* --- BOTONES (Reutilizados) --- */
+.btn { display: inline-block; padding: 15px 35px; background: #8b0000; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; }
+.btn:hover { transform: scale(1.05); }
+.btn-light { background: white; color: #8b0000; }
+
+/* --- OFRENDA (Reutilizado) --- */
+.ofrenda-section { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-attachment: fixed; color: white; text-align: center; padding: 100px 20px; }
+.small-caps { text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
+
+/* --- FOOTER PRINCIPAL (Estilos de tu imagen) --- */
+.main-footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 60px; /* Tamaño del logo circular */
+    height: 60px;
+    border-radius: 50%;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff4d4d; /* Mismo rojo de acento de la nav */
+}
+
+/* --- RESPONSIVE (Ajustes para móviles) --- */
+@media (max-width: 900px) {
+    .nav-links { gap: 15px; flex-wrap: wrap; }
+    .hero h1 { font-size: 2.5rem; }
+    .footer-content { justify-content: center; text-align: center; }
+    .footer-left { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .side-img { display: none; }
+    .qr-text { text-align: center; }
+    .qr-box { margin: 20px auto; }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación 16:9 perfecta */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px; /* Coherencia con tus tarjetas de documentos */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.document-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid #8b0000; /* Acento burdeo superior */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.document-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(139, 0, 0, 0.15);
+}
+
+.document-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.document-card .date {
+    font-size: 0.85rem;
+    color: #8b0000;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+body { 
+    font-family: 'Inter', sans-serif; /* Más moderno y legible */
+}
