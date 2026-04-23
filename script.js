@@ -48,7 +48,6 @@ async function cargarDocumentos() {
         listContainer.innerHTML = pdfs.map(pdf => `
             <a href="${pdf.url}" class="document-card" download>
                 <div>
-                    <span class="date">${pdf.fecha}</span>
                     <h3>${pdf.titulo}</h3>
                 </div>
                 <div class="download-link">

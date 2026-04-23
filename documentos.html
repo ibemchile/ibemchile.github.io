@@ -8,28 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #f4f4f4;">
+<body class="bg-light">
 
-    <header class="main-header" style="height: auto; padding-bottom: 20px;">
+    <header class="main-header header-recursos">
         <nav class="navbar container">
             <ul class="nav-links">
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="index.html#nosotros">NOSOTROS</a></li>
                 <li><a href="index.html#actividades">ACTIVIDADES</a></li>
                 <li><a href="index.html#contacto">CONTACTO</a></li>
-                <li><a href="index.html#ofrenda">OFRENDA</a></li>
-                <li><a href="documentos.html" class="active">DOCUMENTOS</a></li>
+                <li><a href="ofrendas.html">OFRENDA</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">RECURSOS DIGITALES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="documentos.html" class="active">ESCUELA BÍBLICA</a></li>
+                    </ul>
+                </li>
+                <li><a href="#blog">BLOG PASTORAL</a></li>
             </ul>
         </nav>
         
-        <div class="container" style="text-align: center; padding: 60px 0;">
-            <h1 class="serif-title" style="color: white; font-size: 3.5rem; margin-bottom: 10px;">Archivo Digital</h1>
-            <p class="small-caps" style="color: rgba(255,255,255,0.8);">Recursos y formación bíblica</p>
+        <div class="container header-title-section">
+            <h1 class="serif-title">Archivo Digital</h1>
+            <p class="small-caps">Recursos y formación bíblica</p>
         </div>
     </header>
 
-    <main class="container" style="padding: 60px 20px;">
-        <div id="pdf-list" class="grid"></div>
+    <main class="container main-content-recursos">
+        <div id="pdf-list" class="grid">
+            </div>
     </main>
 
     <footer class="main-footer">
@@ -39,9 +46,10 @@
                 <p class="copyright">© 2022 Desarrollado por IBEM Comunicaciones</p>
             </div>
             <div class="footer-right social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/IBEMCHILE/"><i class="fab fa-facebook-f"></i></a>
+                <a href="http://twitter.com/ibemchile"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ibemchile"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/ibemchile"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
