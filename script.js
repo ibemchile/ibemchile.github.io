@@ -10,7 +10,7 @@ async function cargarUltimoSermon() {
         const response = await fetch(url);
         const data = await response.json();
         
-        console.log("Datos recibidos de YouTube:", data); // Esto nos dirá si hay items
+        console.log("Datos recibidos de YouTube:", data); 
 
         if (data.items && data.items.length > 0) {
             const videoId = data.items[0].snippet.resourceId.videoId;
@@ -42,7 +42,7 @@ async function cargarDocumentos() {
     if (!listContainer) return; // Si no existe el div, no hace nada
 
     try {
-        const respuesta = await fetch('data.json'); //
+        const respuesta = await fetch('data.json'); 
         const pdfs = await respuesta.json();
         
         listContainer.innerHTML = pdfs.map(pdf => `
